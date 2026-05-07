@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>无界文档 π</title>
+    <!-- Office.js 仅在 Word Add-in 环境中通过 URL 参数 ?mode=addin 加载 -->
+    <script>
+      if (new URLSearchParams(location.search).get('mode') === 'addin') {
+        var s = document.createElement('script');
+        s.src = 'https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js';
+        document.head.appendChild(s);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
