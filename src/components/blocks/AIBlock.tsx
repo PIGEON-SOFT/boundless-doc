@@ -13,7 +13,7 @@ export default function AIBlock({ block }: { block: Block }) {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('deepseek-api-key') || '');
-  const [showKeyInput, setShowKeyInput] = useState(false);
+  const [showKeyInput, setShowKeyInput] = useState(() => !localStorage.getItem('deepseek-api-key'));
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
