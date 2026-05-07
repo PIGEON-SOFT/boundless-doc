@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci --registry=https://registry.npmmirror.com
+      - run: npm ci
       - run: npx vite build
       - uses: actions/upload-pages-artifact@v3
         with:
